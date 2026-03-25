@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d1j4f7ec5thar"]
+
+[ext_resource type="Texture2D" uid="uid://dgh4ir4bt70xf" path="res://visuales/caracteres/jugador.png" id="1_ietm8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ietm8"]
+radius = 5.0
+height = 34.0
+
+[node name="Jugador" type="CharacterBody2D" unique_id=123557840]
+
+[node name="Visuales" type="Node2D" parent="." unique_id=1213891930]
+
+[node name="Torso" type="Sprite2D" parent="Visuales" unique_id=645593530]
+position = Vector2(0, -9)
+texture = ExtResource("1_ietm8")
+hframes = 8
+vframes = 5
+
+[node name="Piernas" type="Sprite2D" parent="Visuales" unique_id=117554251]
+position = Vector2(0, -6)
+texture = ExtResource("1_ietm8")
+hframes = 8
+vframes = 5
+frame = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430846412]
+shape = SubResource("CapsuleShape2D_ietm8")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1397799939]
+zoom = Vector2(3, 3)
